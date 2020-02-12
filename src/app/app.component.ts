@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-fourth-app';
+oddNumbers: number[] = [];
+evenNumbers: number[] = [];
+  onCounterUp(counterValue: number) {
+    if (counterValue % 2 === 0){
+      this.evenNumbers.push(counterValue);
+    } else {
+      this.oddNumbers.push(counterValue);
+    }
+  }
 }
